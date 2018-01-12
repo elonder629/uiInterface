@@ -66,6 +66,7 @@ public String[] titles = {"La La La Land", "Wonder Woman", "Avengers"};
     public void printTheJunk(){
         System.out.println(getTitle());
         System.out.println("Here is the runtime:" + getRuntime());
+        System.out.println("Here is the age requirement: " + getAgeRequirement());
         System.out.println("Here is the rating out of 10: " + getRating());
         System.out.println("Here is the genre of the movie: " + getGenre());
         System.out.println("Here is the Credits of the movie: " + Arrays.toString(getCredits()));
