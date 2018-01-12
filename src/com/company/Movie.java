@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 /**
  * Created by el693 on 1/11/18.
  */
@@ -16,43 +18,58 @@ public String[] titles = {"La La La Land", "Wonder Woman", "Avengers"};
     public String[] coverPhoto = {"https://upload.wikimedia.org/wikipedia/en/a/ab/La_La_Land_%28film%29.png"
             ,"https://vignette.wikia.nocookie.net/dccu/images/6/6f/JL_Wonder_Woman.jpg/revision/latest?cb=20160914003449"
             ,"https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg"};
+    public int id;
+    public Movie(int ID){
+        id = ID;
+    }
 
     public int getRuntime() {
-        return 0;
+        return runtime[id];
     }
 
 
     public int getRating() {
-        return 0;
+        return ratings[id];
     }
 
 
     public int getAgeRequirement() {
-        return 0;
+        return ageRequirement[id];
     }
 
 
     public String[] getSoundtrack() {
-        return new String[0];
+        String[] temp = {soundtracks[id]};
+        return temp;
     }
 
 
     public String[] getCredits() {
-        return new String[0];
+        String[] temp = {credits[id]};
+        return temp;
     }
 
 
     public String getTitle() {
-        return null;
+        return titles[id];
     }
 
 
     public String getCoverPhotoURL() {
-        return null;
+        return coverPhoto[id];
     }
 
 
     public String getGenre() {
-        return null;
+        return genre[id];
+    }
+    public void printTheJunk(){
+        System.out.println(getTitle());
+        System.out.println("Here is the runtime:" + getRuntime());
+        System.out.println("Here is the rating out of 10: " + getRating());
+        System.out.println("Here is the genre of the movie: " + getGenre());
+        System.out.println("Here is the Credits of the movie: " + Arrays.toString(getCredits()));
+        System.out.println("Here is the soundtrack: " + Arrays.toString(getSoundtrack()));
+        System.out.println("Here is the cover photo: " + getCoverPhotoURL());
     }
 }
